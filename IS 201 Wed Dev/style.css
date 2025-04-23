@@ -1,0 +1,42 @@
+body {
+    background-color: #f5f0e6;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.nav {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.nav a {
+    color: #6b705c;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+h1 {
+    color: #6b705c;
+    text-align: center;
+}
+
+.intro, .video-section, .steps {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.soap-image {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.tableau-section {
+    background-color: #e6dfd3;
+    padding: 20px;
+    border-radius: 10px;
+}
