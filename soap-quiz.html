@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Soap Making Quiz</title>
+    <style>
+        body {
+            background-color: #fdf8f2;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            color: #4b4b4b;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #6b705c;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+        }
+
+        button {
+            background-color: #a5a58d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6b705c;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-weight: bold;
+            color: #4b4b4b;
+            text-align: center;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            color: #6b705c;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="index.html">Home</a> |
+        <a href="resume.html">Résumé</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="scratch.html">Soap Hobby</a>
+    </div>
+
+    <div class="container">
+        <h1>Soap Making Basics Quiz</h1>
+
+        <div class="question">
+            <p><strong>1. What ingredient is essential for saponification?</strong></p>
+            <input type="radio" name="q1" value="a"> Sugar<br>
+            <input type="radio" name="q1" value="b"> Olive oil<br>
+            <input type="radio" name="q1" value="c"> Lye<br>
+        </div>
+
+        <div class="question">
+            <p><strong>2. What is the minimum time soap should cure?</strong></p>
+            <input type="radio" name="q2" value="a"> 12 hours<br>
+            <input type="radio" name="q2" value="b"> 4 weeks<br>
+            <input type="radio" name="q2" value="c"> 1 year<br>
+        </div>
+
+        <div class="question">
+            <p><strong>3. Which oil is commonly used for moisturizing in cold press soap?</strong></p>
+            <input type="radio" name="q3" value="a"> Motor oil<br>
+            <input type="radio" name="q3" value="b"> Coconut oil<br>
+            <input type="radio" name="q3" value="c"> Vegetable shortening<br>
+        </div>
+
+        <button onclick="checkAnswers()">Submit Answers</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: "c",
+                q2: "b",
+                q3: "b"
+            };
+
+            let score = 0;
+
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    score++;
+                }
+            }
+
+            const result = document.getElementById("result");
+            result.textContent = `You got ${score} out of 3 correct! 🎉`;
+        }
+    </script>
+
+</body>
+</html>
